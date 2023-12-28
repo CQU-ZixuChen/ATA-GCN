@@ -22,7 +22,6 @@ class Net(torch.nn.Module):
         self.conv1 = ChebConv(1025, 512, 2)
         self.pool1 = EdgePooling(in_channels=1025)
         self.conv2 = ChebConv(512, 512, 2)
-        self.pool2 = EdgePooling(in_channels=512)
         self.bn1 = torch.nn.BatchNorm1d(512)
         self.bn2 = torch.nn.BatchNorm1d(512)
 
