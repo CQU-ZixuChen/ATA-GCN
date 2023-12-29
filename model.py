@@ -18,7 +18,6 @@ if torch.cuda.is_available():
 class Net(torch.nn.Module):
     def __init__(self, args):
         super(Net, self).__init__()
-        # XJTU
         self.conv1 = ChebConv(1025, 512, 2)
         self.pool1 = EdgePooling(in_channels=1025)
         self.conv2 = ChebConv(512, 512, 2)
